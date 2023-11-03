@@ -2,7 +2,17 @@
 
 This template should help get you started developing component library with Vue 3 in Vite.
 
-## Quickstart
+## Features
+
+- Type generation using [vue-tsc](https://www.npmjs.com/package/vue-tsc)
+- CSS Engine using [Unocss](https://unocss.dev/)
+- Linting using [ESLint](https://eslint.org/)
+- Formatter using [Prettier](https://prettier.io/)
+- Unit testing using [Vitest](https://vitest.dev/)
+- `index.ts` is for your library entry point
+- `main.ts` is for your development demo entry point
+
+## Usage
 
 Install the component
 
@@ -34,7 +44,7 @@ import { BaseComponent } from '@point-hub/vue-library-starter'
 </template>
 ```
 
-## Project Setup
+## Installation
 
 Install bun globally
 
@@ -48,29 +58,21 @@ Install dependencies
 bun install --frozen-lock
 ```
 
-Start development server
+## Commands
 
 ```sh
-bun run dev
+bun run dev # Will run the demos app so you can see your components
+bun run build # Will build your components into a library and generate types
+bun run lint # Will run lint with eslint
+bun run lint:fix # Will autofix lint error
+bun run test # Will run unit test with vitest
 ```
 
-Build and emit types
+## Todo Checklist
 
-```sh
-bun run build
-```
-
-Run test with [Vitest](https://vitest.dev/)
-
-```sh
-bun run test:unit
-```
-
-Run lint with [ESLint](https://eslint.org/)
-
-```sh
-bun run lint
-```
+- [ ] Rename `name`, `version` and `repository` field in package.json
+- [ ] Rename `module`, `main`, and `exports` fields in package.json (for example "module": "./dist/[my-package].js")
+- [ ] Clean up the README
 
 ## Publish Package
 
