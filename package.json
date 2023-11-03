@@ -54,5 +54,9 @@
     "vite": "^4.4.11",
     "vitest": "^0.34.6",
     "vue-tsc": "^1.8.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/point-hub/vue-library-starter.git"
   }
 }
