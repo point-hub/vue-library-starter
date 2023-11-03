@@ -1,13 +1,27 @@
 {
-  "name": "vue-library-starter",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@point-hub/vue-library-starter",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/vue-library-starter.umd.cjs",
+  "module": "./dist/vue-library-starter.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/vue-library-starter.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/vue-library-starter.umd.cjs"
+      }
+    },
+    "./style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly -p tsconfig.build.json",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
