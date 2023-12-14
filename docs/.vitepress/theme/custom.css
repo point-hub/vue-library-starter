@@ -1,0 +1,19 @@
+.demo {
+  @apply py-2;
+}
+
+.demo form {
+  @apply flex flex-col gap-4;
+}
+
+.demo button {
+  @apply border-inherit;
+}
+
+.demo-row {
+  @apply flex flex-wrap w-full gap-2 items-center;
+}
+
+.demo-col {
+  @apply flex flex-col gap-4 w-full;
+}

@@ -5,6 +5,7 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    "emitDeclarationOnly": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -16,6 +17,9 @@
 
     "outDir": "dist",
     "declaration": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
 
     /* Linting */
     "strict": true,
@@ -23,7 +27,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "exclude": ["src/App.vue", "src/main.ts"],
+  "exclude": ["src/App.vue", "src/main.ts", "dist/**/*"],
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/components/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node-build.json" }]
 }
